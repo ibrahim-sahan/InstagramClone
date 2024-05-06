@@ -22,6 +22,7 @@
 		F9C06C7D2BE66CC900E80617 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F9C06C7C2BE66CC900E80617 /* FirebaseFirestore */; };
 		F9C06C7F2BE66CC900E80617 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F9C06C7E2BE66CC900E80617 /* FirebaseStorage */; };
 		F9C06C832BE6816300E80617 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9C06C822BE6816300E80617 /* GoogleService-Info.plist */; };
+		F9DB8D732BE890E700D7C594 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9DB8D722BE890E700D7C594 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		F9C06C6D2BE6620C00E80617 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9C06C6F2BE6620C00E80617 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F9C06C822BE6816300E80617 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F9DB8D722BE890E700D7C594 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		F9C06C602BE6620B00E80617 /* InstagramClone */ = {
 			isa = PBXGroup;
 			children = (
+				F9DB8D712BE8909400D7C594 /* Extensions */,
 				F9C06C612BE6620B00E80617 /* AppDelegate.swift */,
 				F9C06C632BE6620B00E80617 /* SceneDelegate.swift */,
 				F9C06C652BE6620B00E80617 /* ViewController.swift */,
@@ -88,6 +91,14 @@
 				F9C06C822BE6816300E80617 /* GoogleService-Info.plist */,
 			);
 			path = InstagramClone;
+			sourceTree = "<group>";
+		};
+		F9DB8D712BE8909400D7C594 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9DB8D722BE890E700D7C594 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				F93E71E52BE6983A00E1CFF9 /* SignUpViewController.swift in Sources */,
 				F93E71E12BE68EFC00E1CFF9 /* UploadViewController.swift in Sources */,
 				F9C06C622BE6620B00E80617 /* AppDelegate.swift in Sources */,
+				F9DB8D732BE890E700D7C594 /* UIViewController+Extensions.swift in Sources */,
 				F93E71DF2BE68EEE00E1CFF9 /* FeedViewController.swift in Sources */,
 				F9C06C642BE6620B00E80617 /* SceneDelegate.swift in Sources */,
 				F93E71E32BE68F0B00E1CFF9 /* SettingsViewController.swift in Sources */,
