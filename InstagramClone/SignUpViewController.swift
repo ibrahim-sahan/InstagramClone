@@ -15,6 +15,8 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var upPasswordAgainText: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    private let authService = AuthenticationService()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.isHidden = true
@@ -39,22 +41,19 @@ class SignUpViewController: UIViewController {
         activityIndicator.isHidden = false
         activityIndicator.startAnimating()
         
-        createUser(withEmail: email, password: password)
-    }
-    
-    func createUser(withEmail email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (authData, error) in
+        authService.signUp(email: email, password: password) { [weak self] result in
             guard let self = self else { return }
             DispatchQueue.main.async {
                 self.activityIndicator.stopAnimating()
                 self.activityIndicator.isHidden = true
                 
-                if let error = error {
-                    self.presentAlert(title: "Error", message: "Error creating user: " + error.localizedDescription, actionTitle: "Try Again", actionHandler: nil)
-                } else {
-                    self.presentAlert(title: "Success!", message: "You have successfully logged in. Please return to the main page to log in again.", actionTitle: "Return") {
+                switch result {
+                case .success(_):
+                    self.presentAlert(title: "Success!", message: "You have successfully registered. Please log in with your new account.", actionTitle: "OK") {
                         self.navigationController?.popViewController(animated: true)
                     }
+                case .failure(let error):
+                    self.presentAlert(title: "Error", message: "Error creating user: " + error.localizedDescription, actionTitle: "Try Again", actionHandler: nil)
                 }
             }
         }
