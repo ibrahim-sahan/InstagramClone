@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EKI-zx-3gN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EKI-zx-3gN">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -39,7 +39,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Upload"/>
                                 <connections>
-                                    <action selector="uploadButtonClicked:" destination="UoR-6g-N2U" eventType="touchUpInside" id="3JI-lY-ac7"/>
+                                    <action selector="uploadButtonClicked:" destination="UoR-6g-N2U" eventType="touchUpInside" id="YmA-Lb-ith"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,7 +61,7 @@
                     <connections>
                         <outlet property="commentText" destination="NYg-Wc-H4J" id="WID-jv-kxY"/>
                         <outlet property="imageView" destination="v3R-Bn-OAc" id="rRu-4l-sND"/>
-                        <outlet property="uploadButton" destination="QcN-hS-7cx" id="FXr-4x-HdK"/>
+                        <outlet property="uploadButton" destination="QcN-hS-7cx" id="8kd-3Q-Wrw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ml9-sO-BAz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -319,7 +319,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
