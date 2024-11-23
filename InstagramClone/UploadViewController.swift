@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseFirestore
+import FirebaseAuth
 
 class UploadViewController: UIViewController {
     
@@ -22,6 +25,7 @@ class UploadViewController: UIViewController {
     }
     
     @objc func chooseImage() {
+        
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = .photoLibrary
@@ -29,6 +33,40 @@ class UploadViewController: UIViewController {
     }
     
     @IBAction func uploadButtonClicked(_ sender: Any) {
+        
+        let storage = Storage.storage()
+        let storageReference = storage.reference()
+        
+        let mediaFolder = storageReference.child("media")
+        
+        if let data = imageView.image?.jpegData(compressionQuality: 0.5) {
+            
+            let uuid = UUID().uuidString
+            
+            let imageReference = mediaFolder.child("\(uuid).jpg")
+            imageReference.putData(data, metadata: nil) { metadata, error in
+                if error != nil {
+                    self.presentAlert(title: "Error", message: error?.localizedDescription ?? "An error occured while uploading the image.", actionTitle: "OK", actionHandler: nil)
+                } else {
+                    imageReference.downloadURL { url, error in
+                        if error == nil {
+                            let imageUrl = url?.absoluteString
+                            
+                            let firestoreDatabase = Firestore.firestore()
+                            var firestoreReference : DocumentReference? = nil
+                            let firestorePost = ["imageUrl": imageUrl!, "postedBy": Auth.auth().currentUser!.email!, "postComment": self.commentText.text!, "postDate": Date(), "likes": 0] as [String : Any]
+                            
+                            
+                            firestoreReference = firestoreDatabase.collection("posts").addDocument(data: firestorePost, completion: { (error) in
+                                if error != nil {
+                                    self.presentAlert(title: "Error", message: error?.localizedDescription ?? "An error occured while saving the data.", actionTitle: "OK", actionHandler: nil)
+                                }
+                            })
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
