@@ -17,6 +17,7 @@
 		F91AB4422CF28985007BE5A4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F91AB4412CF28985007BE5A4 /* FirebaseStorage */; };
 		F91AB4442CF28985007BE5A4 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = F91AB4432CF28985007BE5A4 /* FirebaseStorageCombine-Community */; };
 		F91AB4462CF29075007BE5A4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F91AB4452CF29075007BE5A4 /* GoogleService-Info.plist */; };
+		F92B11822CF36879004E13A6 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92B11812CF36879004E13A6 /* FeedCell.swift */; };
 		F93E71DF2BE68EEE00E1CFF9 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E71DE2BE68EEE00E1CFF9 /* FeedViewController.swift */; };
 		F93E71E12BE68EFC00E1CFF9 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E71E02BE68EFC00E1CFF9 /* UploadViewController.swift */; };
 		F93E71E32BE68F0B00E1CFF9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E71E22BE68F0B00E1CFF9 /* SettingsViewController.swift */; };
@@ -33,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		F91AB4452CF29075007BE5A4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F92B11812CF36879004E13A6 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		F93E71DE2BE68EEE00E1CFF9 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		F93E71E02BE68EFC00E1CFF9 /* UploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
 		F93E71E22BE68F0B00E1CFF9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				F9C06C632BE6620B00E80617 /* SceneDelegate.swift */,
 				F9C06C652BE6620B00E80617 /* ViewController.swift */,
 				F93E71DE2BE68EEE00E1CFF9 /* FeedViewController.swift */,
+				F92B11812CF36879004E13A6 /* FeedCell.swift */,
 				F93E71E02BE68EFC00E1CFF9 /* UploadViewController.swift */,
 				F93E71E22BE68F0B00E1CFF9 /* SettingsViewController.swift */,
 				F93E71E42BE6983A00E1CFF9 /* SignUpViewController.swift */,
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C06C662BE6620B00E80617 /* ViewController.swift in Sources */,
+				F92B11822CF36879004E13A6 /* FeedCell.swift in Sources */,
 				F93E71E52BE6983A00E1CFF9 /* SignUpViewController.swift in Sources */,
 				F93E71E12BE68EFC00E1CFF9 /* UploadViewController.swift in Sources */,
 				F9D0C40A2C46CD890092CB6F /* AuthenticationService.swift in Sources */,
