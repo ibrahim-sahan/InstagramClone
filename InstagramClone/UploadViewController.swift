@@ -53,15 +53,18 @@ class UploadViewController: UIViewController {
                             let imageUrl = url?.absoluteString
                             
                             let firestoreDatabase = Firestore.firestore()
-                            var firestoreReference : DocumentReference? = nil
                             let firestorePost = ["imageUrl": imageUrl!, "postedBy": Auth.auth().currentUser!.email!, "postComment": self.commentText.text!, "postDate": Date(), "likes": 0] as [String : Any]
                             
                             
-                            firestoreReference = firestoreDatabase.collection("posts").addDocument(data: firestorePost, completion: { (error) in
+                            firestoreDatabase.collection("posts").addDocument(data: firestorePost) { (error) in
                                 if error != nil {
                                     self.presentAlert(title: "Error", message: error?.localizedDescription ?? "An error occured while saving the data.", actionTitle: "OK", actionHandler: nil)
+                                } else {
+                                    self.imageView.image = UIImage(named: "upload.png")
+                                    self.commentText.text = ""
+                                    self.tabBarController?.selectedIndex = 0
                                 }
-                            })
+                            }
                         }
                     }
                 }
